@@ -8,13 +8,16 @@
     //     font-size:6.48rem;
     // }//1 rem = 9px < 1200px
     @include respond(tab-port) {
-        font-size:7.2*.9rem;
+        font-size:7.2*.8rem;
     }//1 rem = 8px < 900px
     @include respond(phone) {
-        font-size:7.2*.75rem;
+        font-size:7.2*.6rem;
     } //1 rem = 8px < 600px
+    @media(max-width: 400px) {
+        font-size:7.2*.5rem
+    } //1 rem = 8px < 400px
     @include respond(big-desktop) {
-        font-size:7.2rem;
+        font-size:7.2*1.2rem;
     }//1 rem = 12 > 1800px
 }
 

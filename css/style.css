@@ -197,18 +197,29 @@ body {
 .experience {
   background-color: #fff;
   color: #1D1616;
-  height: 70rem;
-  clip-path: polygon(0 0, 100% 0, 100% 50rem, 0 100%); }
+  height: 80rem;
+  clip-path: polygon(0 0, 100% 0, 100% 60rem, 0 100%); }
   .experience__description {
     display: flex;
     align-items: center;
     padding-bottom: 4.2rem; }
+    @media (max-width: 900px) {
+      .experience__description {
+        flex-direction: column;
+        width: 80%;
+        margin-top: 8rem; } }
     .experience__description .oppotunity {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: start;
-      margin-left: 3rem; }
+      margin-left: 3rem;
+      width: 86%; }
+      @media (max-width: 900px) {
+        .experience__description .oppotunity {
+          width: 100%;
+          margin-bottom: 2rem;
+          margin-left: 0rem; } }
       .experience__description .oppotunity__title {
         font-size: 5.6rem;
         font-weight: 700;
@@ -237,7 +248,6 @@ body {
           .experience__description .oppotunity__title {
             font-weight: 500; } }
       .experience__description .oppotunity__content {
-        width: 86%;
         font-family: Roboto;
         font-weight: 400;
         font-size: 1.6rem;
@@ -247,9 +257,14 @@ body {
       flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      width: 60%; }
+      @media (max-width: 900px) {
+        .experience__description .pass-ATS {
+          align-items: start;
+          width: 100%;
+          margin-top: 1rem; } }
       .experience__description .pass-ATS__title {
-        width: 60%;
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 3.2rem;
@@ -266,7 +281,6 @@ body {
             font-size: 1.92rem;
             line-height: 2.56rem; } }
       .experience__description .pass-ATS__content {
-        width: 60%;
         font-family: Roboto;
         font-weight: 400;
         font-size: 1.6rem;
@@ -326,14 +340,8 @@ body {
   padding-bottom: 20rem;
   background-image: linear-gradient(to right bottom, #FFE7DC, #F5C6C0);
   clip-path: polygon(0 0, 100% 0, 100% 74rem, 0 100%); }
-  @media (max-width: 768px) {
-    .hero {
-      clip-path: polygon(0 0, 100% 0, 100% 85rem, 0 100%); } }
-  @media (max-width: 600px) {
-    .hero {
-      clip-path: polygon(0 0, 100% 0, 100% 100rem, 0 100%); } }
   .hero .header {
-    min-height: 8.6rem;
+    height: 8.6rem;
     color: #1D1616;
     display: flex;
     justify-content: space-between;
@@ -381,15 +389,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  min-height: 45rem;
-  margin-top: 8rem; }
+  height: 45rem;
+  padding-top: 8rem; }
+  @media (max-width: 900px) {
+    .main {
+      margin-left: 2rem;
+      padding-top: 6rem; } }
   @media (max-width: 600px) {
     .main {
       margin-top: 3rem;
-      flex-direction: column; } }
+      flex-direction: column;
+      padding-top: 4rem; } }
   @media (max-width: 400px) {
     .main {
-      margin-top: 0rem; } }
+      margin-top: 0rem;
+      padding-top: 2rem; } }
   .main__title {
     max-width: 67rem;
     display: flex;
@@ -429,13 +443,16 @@ body {
   margin-top: 4.1rem; }
   @media (max-width: 900px) {
     .title__primary {
-      font-size: 6.48rem; } }
+      font-size: 5.76rem; } }
   @media (max-width: 600px) {
     .title__primary {
-      font-size: 5.4rem; } }
+      font-size: 4.32rem; } }
+  @media (max-width: 400px) {
+    .title__primary {
+      font-size: 3.6rem; } }
   @media (min-width: 1800px) {
     .title__primary {
-      font-size: 7.2rem; } }
+      font-size: 8.64rem; } }
   .title__primary span {
     background-image: linear-gradient(to right bottom, #27a8ab, #0c6e84);
     -webkit-background-clip: text;
@@ -735,6 +752,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%; }
+    @media (max-width: 900px) {
+      .CTA__container {
+        flex-direction: column; } }
     .CTA__container__item {
       height: 60%;
       border-radius: 12px;

@@ -8,6 +8,9 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+        @include respond(tab-port) {
+            flex-direction: column;
+        }//1 rem = 8px < 900px
         
         &__item {
             height: 60%;

@@ -1,15 +1,17 @@
 .experience {
     background-color:$color-white;
     color: $color-dark;
-    height: 70rem;
-    clip-path: polygon(0 0, 100% 0, 100% 50rem, 0 100%);
-
-
-
+    height: 80rem;
+    clip-path: polygon(0 0, 100% 0, 100% 60rem, 0 100%);
     &__description {
         display: flex;
         align-items: center;
         padding-bottom: 4.2rem;
+        @include respond(tab-port) {
+            flex-direction: column;
+            width:80%;
+            margin-top: 8rem;
+        }//1 rem = 8px < 900px
 
         .oppotunity {
             flex:1;
@@ -17,7 +19,13 @@
             flex-direction: column;
             align-items: start;
             margin-left:3rem;
+            width: 86%;
+            @include respond(tab-port) {
+                width:100%;
+                margin-bottom: 2rem;
+                margin-left:0rem;
 
+            }//1 rem = 8px < 900px
             &__title {
                 @include h2;
                 @include text-linear-primary;
@@ -29,21 +37,23 @@
 
             }
             &__content {
-                width: 86%;
                 @include text;
                 color: $color-dark;
             }
         }
         .pass-ATS {
             flex:1;
-            // background-color: red;
             display: flex;
             flex-direction: column;
             align-items: center;
-            // padding-left: 3rem;
+            width:60%;
+            @include respond(tab-port) {
+                align-items: start;
+                width: 100%;
+                margin-top:1rem;
+            }//1 rem = 8px < 900px
             
             &__title {
-                width: 60%;
                 @include h4;
                 @include text-linear-primary;
                 padding-bottom: 1rem;
@@ -51,7 +61,6 @@
 
             }
             &__content {
-                width: 60%;
                 @include text;
                 color: $color-dark;
 

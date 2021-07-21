@@ -3,16 +3,16 @@
     padding-bottom: 20rem;
     @include background-color;
     clip-path: polygon(0 0, 100% 0, 100% 74rem, 0 100%);
-    @media (max-width: 768px) {      
-        clip-path: polygon(0 0, 100% 0, 100% 85rem, 0 100%);
-    } //1 rem = 8px < 768ox
-    @include respond(phone) {
-        clip-path: polygon(0 0, 100% 0, 100% 100rem, 0 100%);
-    } //1 rem = 8px < 600px
+    // @media (max-width: 768px) {      
+    //     clip-path: polygon(0 0, 100% 0, 100% 85rem, 0 100%);
+    // } //1 rem = 8px < 768ox
+    // @include respond(phone) {
+    //     clip-path: polygon(0 0, 100% 0, 100% 100rem, 0 100%);
+    // } //1 rem = 8px < 600px
     
 
     .header {
-        min-height: 8.6rem;
+        height: 8.6rem;
         color:$color-dark;  
         display: flex;
         justify-content: space-between;
@@ -66,14 +66,21 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 45rem;
-    margin-top: 8rem;
+    height: 45rem;
+    padding-top: 8rem;
+    @include respond(tab-port) {
+        margin-left: 2rem;
+        padding-top: 6rem;
+    }//1 rem = 8px < 900px
     @include respond(phone) {
         margin-top: 3rem;
         flex-direction: column;
+        padding-top: 4rem;
     } //1 rem = 8px < 600px
     @media(max-width: 400px) {
         margin-top: 0rem;
+        padding-top: 2rem;
+
     } //1 rem = 8px < 400px
     &__title{
         max-width: 67rem;

@@ -231,6 +231,10 @@ body {
   color: #1D1616;
   height: 80rem;
   clip-path: polygon(0 0, 100% 0, 100% 60rem, 0 100%); }
+  @media (max-width: 400px) {
+    .experience {
+      height: 85rem;
+      clip-path: polygon(0 0, 100% 0, 100% 65rem, 0 100%); } }
   .experience__description {
     display: flex;
     align-items: center;
@@ -240,6 +244,14 @@ body {
         flex-direction: column;
         width: 80%;
         margin-top: 8rem; } }
+    @media (max-width: 600px) {
+      .experience__description {
+        margin-top: 6rem;
+        padding-bottom: 1.2rem; } }
+    @media (max-width: 400px) {
+      .experience__description {
+        margin-top: 6rem;
+        padding-bottom: 1.2rem; } }
     .experience__description .oppotunity {
       flex: 1;
       display: flex;
@@ -323,12 +335,20 @@ body {
   .experience__accomplishment {
     display: flex;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    width: 95%;
+    text-align: center; }
+    @media (max-width: 600px) {
+      .experience__accomplishment {
+        margin-bottom: 2rem; } }
 
 .accomplishment {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media (max-width: 600px) {
+    .accomplishment {
+      margin-bottom: 2rem; } }
   .accomplishment__number {
     background-image: linear-gradient(to right bottom, #27a8ab, #0c6e84);
     -webkit-background-clip: text;
@@ -372,6 +392,12 @@ body {
   padding-bottom: 20rem;
   background-image: linear-gradient(to right bottom, #FFE7DC, #F5C6C0);
   clip-path: polygon(0 0, 100% 0, 100% 74rem, 0 100%); }
+  @media (max-width: 600px) {
+    .hero {
+      clip-path: polygon(0 0, 100% 0, 100% 94rem, 0 100%); } }
+  @media (max-width: 400px) {
+    .hero {
+      clip-path: polygon(0 0, 100% 0, 100% 74rem, 0 100%); } }
   .hero .header {
     height: 8.6rem;
     color: #1D1616;
@@ -429,13 +455,14 @@ body {
       padding-top: 6rem; } }
   @media (max-width: 600px) {
     .main {
-      margin-top: 3rem;
+      height: 65rem;
+      margin-left: 0rem;
       flex-direction: column;
-      padding-top: 4rem; } }
+      padding-top: 4rem;
+      text-align: center; } }
   @media (max-width: 400px) {
     .main {
-      margin-top: 0rem;
-      padding-top: 2rem; } }
+      height: 45rem; } }
   .main__title {
     max-width: 67rem;
     display: flex;
@@ -446,45 +473,50 @@ body {
         align-items: center; } }
   .main__pic-frame {
     width: 50rem;
-    height: 45rem; }
-    @media (max-width: 1200px) {
-      .main__pic-frame {
-        width: 45rem;
-        height: 40.5rem; } }
+    height: 45rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../../resources/png/hero__illstration.png"); }
     @media (max-width: 900px) {
       .main__pic-frame {
-        width: 40rem;
-        height: 36rem; } }
+        width: 37.5rem;
+        height: 36rem;
+        margin-right: 1rem; } }
     @media (max-width: 600px) {
       .main__pic-frame {
-        margin-top: 3rem;
-        width: 40rem;
-        height: 36rem;
-        border-radius: 16px; } }
-    .main__pic-frame img {
-      width: 40rem;
-      height: 36rem;
-      background-position: center; }
+        background-size: cover;
+        width: 80%;
+        margin-right: 0rem;
+        margin-left: 6rem;
+        border-radius: 12px;
+        margin-top: 1rem; } }
+    @media (max-width: 400px) {
+      .main__pic-frame {
+        height: 22.5rem;
+        margin-left: 3rem; } }
+    @media (min-width: 1800px) {
+      .main__pic-frame {
+        width: 60rem;
+        height: 54rem; } }
 
 .title__primary {
   font-size: 7.2rem;
   font-weight: 700;
   line-height: 7.2rem;
   color: #1D1616;
-  margin-bottom: 1.2rem;
-  margin-top: 4.1rem; }
+  margin-bottom: 1.2rem; }
   @media (max-width: 900px) {
     .title__primary {
-      font-size: 5.76rem; } }
+      font-size: 5.4rem;
+      line-height: 5.76rem; } }
   @media (max-width: 600px) {
     .title__primary {
-      font-size: 4.32rem; } }
-  @media (max-width: 400px) {
-    .title__primary {
-      font-size: 3.6rem; } }
+      font-size: 4.32rem;
+      line-height: 4.32rem; } }
   @media (min-width: 1800px) {
     .title__primary {
-      font-size: 8.64rem; } }
+      font-size: 8.64rem;
+      line-height: 8.64rem; } }
   .title__primary span {
     background-image: linear-gradient(to right bottom, #27a8ab, #0c6e84);
     -webkit-background-clip: text;
@@ -533,7 +565,7 @@ body {
   background-image: linear-gradient(to right bottom, #FFE7DC, #F5C6C0); }
 
 .swiper-container {
-  height: 66rem;
+  min-height: 50rem;
   margin-top: -20rem; }
   .swiper-container .swiper-wrapper .swiper-slide {
     font-size: 4.8rem;
@@ -558,6 +590,9 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 12.7rem; }
+  @media (max-width: 600px) {
+    .mentor__content {
+      width: 70%; } }
 
 .mentor__image-container {
   position: relative;
@@ -566,6 +601,9 @@ body {
   height: 10rem;
   margin-bottom: 2.7rem;
   margin-top: 4.6rem; }
+  @media (max-width: 400px) {
+    .mentor__image-container {
+      margin-top: 4.6rem; } }
   .mentor__image-container__img {
     width: 100%; }
 
@@ -604,7 +642,11 @@ body {
   line-height: 2.4rem;
   text-align: justify;
   margin-bottom: 2.8rem;
+  max-height: 60rem;
   line-height: 2; }
+  @media (max-width: 600px) {
+    .mentor__job-experience {
+      margin-bottom: 1rem; } }
 
 .service {
   display: block;
@@ -783,7 +825,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; }
+    height: 100%;
+    width: 95%; }
     @media (max-width: 600px) {
       .CTA__container {
         flex-direction: column; } }
@@ -791,6 +834,7 @@ body {
       flex: 1;
       margin: 2.5% 0;
       width: 80%;
+      height: 80%;
       border-radius: 12px; }
       .CTA__container__item:last-child {
         background-color: #27a8ab; }
@@ -835,12 +879,12 @@ body {
             line-height: 6.4rem; } }
         @media (max-width: 900px) {
           .CTA__container .item--1 .item__title {
-            font-size: 4.48rem; } }
+            font-size: 3.48rem; } }
         @media (max-width: 600px) {
           .CTA__container .item--1 .item__title {
             font-size: 3.36rem;
             line-height: 3.84rem;
-            margin-bottom: 0;
+            margin-bottom: 1.2rem;
             margin-top: 1.2rem; } }
       .CTA__container .item--1 .item__email {
         display: flex;
@@ -851,9 +895,6 @@ body {
         @media (max-width: 900px) {
           .CTA__container .item--1 .item__email {
             flex-direction: column; } }
-        @media (max-width: 600px) {
-          .CTA__container .item--1 .item__email {
-            flex-direction: row; } }
         .CTA__container .item--1 .item__email__email-address {
           width: 31.8rem;
           font-size: 2.4rem;
@@ -867,6 +908,9 @@ body {
             .CTA__container .item--1 .item__email__email-address {
               font-size: 1.92rem;
               line-height: 2.56rem; } }
+          @media (max-width: 600px) {
+            .CTA__container .item--1 .item__email__email-address {
+              margin-bottom: 1.5rem; } }
         .CTA__container .item--1 .item__email .item__button {
           padding: 0 0; }
           @media (max-width: 900px) {
@@ -914,7 +958,7 @@ body {
             line-height: 6.4rem; } }
         @media (max-width: 900px) {
           .CTA__container .item--2 .item__title {
-            font-size: 3.48rem; } }
+            font-size: 4.48rem; } }
         .CTA__container .item--2 .item__title__wechat {
           width: 4.8rem;
           height: 3.9rem;
@@ -942,9 +986,16 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%; }
+    @media (max-width: 600px) {
+      .footer__content {
+        flex-direction: column;
+        margin-bottom: 1.5rem; } }
     .footer__content__logo {
       margin-left: 1.5rem;
       display: flex; }
+      @media (max-width: 600px) {
+        .footer__content__logo {
+          margin-left: 0rem; } }
       .footer__content__logo__icon {
         margin-right: 1.5rem;
         position: relative;
@@ -966,6 +1017,9 @@ body {
         font-size: 1.6rem;
         line-height: 2.4rem;
         padding: 0 2rem; }
+        @media (max-width: 600px) {
+          .footer__content__nav__item {
+            padding: 0 1rem; } }
         .footer__content__nav__item a {
           color: #1D1616; }
   .footer__copy-right {

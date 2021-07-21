@@ -3,6 +3,10 @@
     color: $color-dark;
     height: 80rem;
     clip-path: polygon(0 0, 100% 0, 100% 60rem, 0 100%);
+    @media(max-width: 400px) {
+        height: 85rem;
+        clip-path: polygon(0 0, 100% 0, 100% 65rem, 0 100%);
+    } //1 rem = 8px < 400px
     &__description {
         display: flex;
         align-items: center;
@@ -12,6 +16,18 @@
             width:80%;
             margin-top: 8rem;
         }//1 rem = 8px < 900px
+        @include respond(phone) {
+        } //1 rem = 8px < 600px
+        @include respond(phone) {
+            margin-top: 6rem;
+            padding-bottom: 1.2rem;
+        } //1 rem = 8px < 600px
+        @media(max-width: 400px) {
+            margin-top: 6rem;
+            padding-bottom: 1.2rem;
+        } //1 rem = 8px < 400px
+        
+        
 
         .oppotunity {
             flex:1;
@@ -52,7 +68,7 @@
                 width: 100%;
                 margin-top:1rem;
             }//1 rem = 8px < 900px
-            
+
             &__title {
                 @include h4;
                 @include text-linear-primary;
@@ -76,7 +92,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        
+        width: 95%;
+        text-align: center;
+        @include respond(phone) {
+            margin-bottom: 2rem;
+        } //1 rem = 8px < 600px
     }
 }
 
@@ -85,6 +105,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include respond(phone) {
+        margin-bottom: 2rem;
+    } //1 rem = 8px < 600px
     &__number {
         @include text-linear-primary;
         @include h2;

@@ -12,6 +12,7 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+        width: 95%;
         @include respond(phone) {
             flex-direction: column; 
         }//1 rem = 8px < 600px
@@ -20,6 +21,7 @@
             flex:1;
             margin:2.5% 0;
             width: 80%;
+            height: 80%;
             border-radius: 12px;
             &:last-child { 
                 background-color: $color-primary-light;
@@ -46,12 +48,12 @@
                 @include text-linear-primary;
                 margin-bottom: 1.2rem;
                 @include respond(tab-port) {
-                    font-size:4.48rem;
+                    font-size:3.48rem;
                 }//1 rem = 8px < 900px
                 @include respond(phone) {
                     font-size:5.6*0.6rem;
                     line-height: 6.4*.6rem;
-                    margin-bottom: 0;
+                    margin-bottom: 1.2rem;
                     margin-top: 1.2rem;
                 } //<600px
             }
@@ -64,13 +66,15 @@
                 @include respond(tab-port) {
                     flex-direction: column;
                 }//1 rem = 8px < 900px
-                @include respond(phone) {
-                    flex-direction: row;
-                } //1 rem = 8px < 600px
+                
                 &__email-address {
                     width: 31.8rem;
                     @include h4;
                     color:$color-primary-dark;
+                    @include respond(phone) {
+                        
+                        margin-bottom: 1.5rem;
+                    } //1 rem = 8px < 600px
                 }
                 .item__button {
                     padding: 0 0;
@@ -106,7 +110,7 @@
                 @include h2;
                 color: $color-white;
                 @include respond(tab-port) {
-                    font-size:3.48rem;
+                    font-size:4.48rem;
                 }//1 rem = 8px < 900px
                 &__wechat{
                     width: 4.8rem;

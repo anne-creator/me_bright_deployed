@@ -1,14 +1,15 @@
 //hero page: 1.header 2.section.main 3.company logo
 .hero {
     padding-bottom: 20rem;
+
     @include background-color;
     clip-path: polygon(0 0, 100% 0, 100% 74rem, 0 100%);
-    // @media (max-width: 768px) {      
-    //     clip-path: polygon(0 0, 100% 0, 100% 85rem, 0 100%);
-    // } //1 rem = 8px < 768ox
-    // @include respond(phone) {
-    //     clip-path: polygon(0 0, 100% 0, 100% 100rem, 0 100%);
-    // } //1 rem = 8px < 600px
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 94rem, 0 100%);
+    } //1 rem = 8px < 600px
+    @media(max-width: 400px) {
+        clip-path: polygon(0 0, 100% 0, 100% 74rem, 0 100%);
+    } //1 rem = 8px < 600px
     
 
     .header {
@@ -73,14 +74,14 @@
         padding-top: 6rem;
     }//1 rem = 8px < 900px
     @include respond(phone) {
-        margin-top: 3rem;
+        height: 65rem;
+        margin-left: 0rem;
         flex-direction: column;
         padding-top: 4rem;
+        text-align:center;
     } //1 rem = 8px < 600px
     @media(max-width: 400px) {
-        margin-top: 0rem;
-        padding-top: 2rem;
-
+        height: 45rem;
     } //1 rem = 8px < 400px
     &__title{
         max-width: 67rem;
@@ -90,29 +91,38 @@
         @include respond(phone) {
             align-items: center;
         } //1 rem = 8px < 600px
+        @media(max-width: 400px) {
+            // width:50*.5rem;
+            
+        } //1 rem = 8px < 400px
     }
     &__pic-frame{
         width: 50rem;
         height: 45rem;
-        @include respond(tab-land) {
-            width: 45rem;
-            height: 40.5rem;
-        }//< 1200px
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../../resources/png/hero__illstration.png');    
         @include respond(tab-port) {
-            width: 40rem;
-            height: 36rem;
-        }//< 900px
+            width:50*.75rem;
+            height: 45*.8rem;
+            margin-right: 1rem;
+        }//1 rem = 8px < 900px
         @include respond(phone) {
-            margin-top: 3rem;
-            width: 40rem;
-            height: 36rem;
-            border-radius:16px;
-        } //< 600px
-        img {
-            width: 40rem;
-            height: 36rem;           
-            background-position: center; 
-        }
+            background-size: cover;
+            width:80%;
+            margin-right: 0rem;
+            margin-left: 6rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+        } //1 rem = 8px < 600px
+        @media(max-width: 400px) {
+            height: 45*.5rem;
+            margin-left: 3rem;
+        } //1 rem = 8px < 400px
+        @include respond(big-desktop) {
+            width:50*1.2rem;
+            height: 45*1.2rem;
+        }//1 rem = 12 > 1800px
     }
 }
     //title {
@@ -120,7 +130,6 @@
         @include h1;
         color: $color-dark;
         margin-bottom: 1.2rem;
-        margin-top: 4.1rem;
         span {
             @include text-linear-primary;
         }

@@ -11,9 +11,16 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        @include respond(phone) {
+            flex-direction: column; 
+            margin-bottom: 1.5rem;   
+        } //1 rem = 8px < 600px
         &__logo {
             margin-left: 1.5rem;
             display: flex;
+            @include respond(phone) {
+                margin-left: 0rem;    
+            } //1 rem = 8px < 600px
             &__icon {
                 margin-right: 1.5rem;
                 position:relative;
@@ -33,8 +40,9 @@
                 display: flex;
                 @include text__nav;
                 padding:0 2rem;
-                // justify-content: center;
-
+                @include respond(phone) {
+                    padding:0 1rem;
+                } //1 rem = 8px < 600px
                 a {
                     color: $color-dark;
                 }
@@ -42,9 +50,6 @@
             }
         }
     }
-    //end of content: first item in footer
-        
-    //second item in footer
     &__copy-right {
         @include text;
         color: $color-dark;

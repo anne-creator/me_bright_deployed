@@ -754,11 +754,6 @@ body {
   .price__cta-button {
     margin-top: -1rem; }
 
-.row {
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch; }
-
 .col-1-of-4 {
   margin: 1.5rem;
   margin-top: 0;
@@ -772,7 +767,7 @@ body {
   margin-bottom: 0; }
 
 .col-1-of-2 {
-  margin: 0 2.5%;
+  margin: 2.5%;
   width: 45%; }
 
 .CTA {
@@ -783,9 +778,7 @@ body {
       height: 32; } }
   @media (max-width: 600px) {
     .CTA {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; } }
+      min-height: 50rem; } }
   .CTA__container {
     display: flex;
     justify-content: center;
@@ -793,17 +786,14 @@ body {
     height: 100%; }
     @media (max-width: 600px) {
       .CTA__container {
-        flex-direction: column;
-        height: 95%;
-        width: 80%; } }
+        flex-direction: column; } }
     .CTA__container__item {
-      height: 75%;
+      flex: 1;
+      margin: 2.5% 0;
+      width: 80%;
       border-radius: 12px; }
       .CTA__container__item:last-child {
         background-color: #27a8ab; }
-        @media (max-width: 600px) {
-          .CTA__container__item:last-child {
-            margin-top: 3rem; } }
     .CTA__container .item--1 {
       display: flex;
       flex-direction: column;
@@ -817,7 +807,8 @@ body {
       background-color: #fff; }
       @media (max-width: 600px) {
         .CTA__container .item--1 {
-          padding-top: 0rem; } }
+          padding-top: 0rem;
+          margin-right: 0rem; } }
       .CTA__container .item--1 .item__title {
         font-size: 5.6rem;
         font-weight: 700;
@@ -848,7 +839,9 @@ body {
         @media (max-width: 600px) {
           .CTA__container .item--1 .item__title {
             font-size: 3.36rem;
-            line-height: 3.84rem; } }
+            line-height: 3.84rem;
+            margin-bottom: 0;
+            margin-top: 1.2rem; } }
       .CTA__container .item--1 .item__email {
         display: flex;
         justify-content: center;
@@ -895,6 +888,9 @@ body {
       background-size: 100%;
       background-position: center bottom;
       background-repeat: no-repeat; }
+      @media (max-width: 600px) {
+        .CTA__container .item--2 {
+          margin-left: 0rem; } }
       .CTA__container .item--2 .item__title {
         text-align: center;
         font-size: 5.6rem;
@@ -930,6 +926,10 @@ body {
         height: 100;
         display: block;
         margin: 0 auto; }
+        @media (max-width: 600px) {
+          .CTA__container .item--2 .item__wechat {
+            width: 80%;
+            height: 80%; } }
 
 .footer {
   height: 22.4rem;

@@ -5,31 +5,24 @@
         height: 40*.8;
     }//1 rem = 8px < 900px
     @include respond(phone) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }//1 rem = 8px < 600xp
+        min-height:50rem;
+    } //1 rem = 8px < 600px
     &__container{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         @include respond(phone) {
-            flex-direction: column;
-            height:95%;
-            width: 80%;
+            flex-direction: column; 
         }//1 rem = 8px < 600px
         
         &__item {
-            height: 75%;
+            flex:1;
+            margin:2.5% 0;
+            width: 80%;
             border-radius: 12px;
-            // padding-top: 1.6rem;
-            // padding-bottom: 2.8rem;
             &:last-child { 
                 background-color: $color-primary-light;
-                @include respond(phone) {
-                    margin-top: 3rem;
-                }//1 rem = 8px < 600px
             }
         }
         .item--1 {
@@ -45,6 +38,7 @@
             background-color: #fff;
             @include respond(phone) {
                 padding-top: 0rem;
+                margin-right: 0rem;
             } //1 rem = 8px < 600px
 
             .item__title {
@@ -57,7 +51,9 @@
                 @include respond(phone) {
                     font-size:5.6*0.6rem;
                     line-height: 6.4*.6rem;
-                }
+                    margin-bottom: 0;
+                    margin-top: 1.2rem;
+                } //<600px
             }
             .item__email {
                 display: flex;
@@ -102,6 +98,9 @@
             background-size: 100%;
             background-position: center bottom;
             background-repeat: no-repeat;
+            @include respond(phone) {
+                margin-left: 0rem;
+            } //1 rem = 8px < 600px
             .item__title{
                 text-align: center;
                 @include h2;
@@ -115,10 +114,6 @@
                     margin-left: 1rem;
                     position: relative;
                     margin-top: 0.3rem;
-                    // @include respond(tab-port) {
-                    //     width: 4.8*.8rem;
-                    //     height: 3.9*.8rem;
-                    // }//1 rem = 8px < 900px
                 }
             }
             .item__wechat {
@@ -126,9 +121,10 @@
                 height: 100;
                 display: block;
                 margin: 0 auto;
-                // @include respond(tab-port) {
-                //     margin-left: .5rem;
-                // }//1 rem = 8px < 900px
+                @include respond(phone) {
+                    width: 80%;
+                    height: 80%;
+                }
             }
         }
     }

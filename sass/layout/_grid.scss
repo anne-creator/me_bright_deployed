@@ -1,10 +1,8 @@
-.row {
-    display: flex;
-    // max-width: $grid-width;
-    justify-content: space-around;
-    // padding: 2rem;
-    align-items: stretch;
-}
+// .row {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: stretch;
+// }
 
 .col-1-of-4 {
     margin:$gutter-15rem;
@@ -24,7 +22,7 @@
 }
 
 .col-1-of-2 {
-    margin:0 2.5%;
+    margin:2.5%;
     width: 45%;
 
 }

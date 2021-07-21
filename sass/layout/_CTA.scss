@@ -1,0 +1,107 @@
+.CTA {
+    @include background-color;
+    height: 40rem;
+
+    &__container{
+        // background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        
+        &__item {
+            height: 60%;
+            // background-color: $color-white;
+            border-radius: 12px;
+            padding-top: 1.6rem;
+            padding-bottom: 2.8rem;
+            &:last-child { 
+                background-color: $color-primary-light;
+            }
+            
+            
+        }
+        .item--1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.5rem;
+            background-image: url('../resources/png/CTA-email.png');
+            background-size:110%;
+            background-position:right bottom;
+            background-repeat: no-repeat;
+            background-color: #fff;
+
+            .item__title {
+                @include h2;
+                @include text-linear-primary;
+                margin-bottom: 1.2rem;
+            }
+            .item__email {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1.2rem;
+                text-align: center;
+                &__email-address {
+                    width: 31.8rem;
+                    @include h4;
+                    // padding-left: 1.5rem;
+                    color:$color-primary-dark;
+                    // margin-right: 1.6rem;
+                }
+                .item__button {
+                    // margin-left: -2rem;
+                    padding: 0 0;
+                    .email-link {
+                        display: block;
+                        color: $color-white; 
+                        padding: 0.6rem 3.2rem;
+    
+                    }
+                }
+            }
+        
+                
+            
+            
+        }
+ 
+        .item--2 {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            margin-left: 1.5rem;
+            background-image: url('../../resources/png/CTA-wechat.png');          
+            background-size: 100%;
+            background-position: center bottom
+
+            ;
+            background-repeat: no-repeat;
+            .item__title{
+                text-align: center;
+                @include h2;
+                color: $color-white;
+                margin-left: 5rem;
+                &__wechat{
+                    width: 4.8rem;
+                    height: 3.9rem;
+                    margin-left: 1rem;
+                    position: relative;
+                    margin-top: 0.3rem;
+                }
+            }
+            .item__wechat {
+                background-color: yellow;
+                width: 16.2rem;
+                height: 16.2rem;
+                display: block;
+                margin: 0 auto;
+                margin-left: 5rem;
+            }
+        }
+    }
+}
+
+

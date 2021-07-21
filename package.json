@@ -1,0 +1,23 @@
+{
+  "name": "mebright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnneLiu49/MeBright.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnneLiu49/MeBright/issues"
+  },
+  "homepage": "https://github.com/AnneLiu49/MeBright#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "node-sass": "^6.0.1"
+  }
+}

@@ -1,0 +1,19 @@
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+// @import glide.core.scss;
+@import '_base';
+@import '_components';
+@import '_mixins.scss';
+
+
+@import "layout/_experience.scss",
+'layout/_header.scss',
+'layout/_mentor.scss',
+'layout/_service.scss',
+'layout/_features.scss',
+'layout/_price.scss';
+
+@import "layout/_grid.scss";
+@import "layout/_CTA.scss";
+@import "layout/_footer.scss";

@@ -1,0 +1,181 @@
+
+//default: Source Sans Pro
+@mixin h1 {
+    font-size: 7.2rem;
+    font-weight: 700;
+    line-height: 7.2rem;
+    // @include respond(tab-land) {
+    //     font-size:6.48rem;
+    // }//1 rem = 9px < 1200px
+    @include respond(tab-port) {
+        font-size:7.2*.9rem;
+    }//1 rem = 8px < 900px
+    @include respond(phone) {
+        font-size:7.2*.75rem;
+    } //1 rem = 8px < 600px
+    @include respond(big-desktop) {
+        font-size:7.2rem;
+    }//1 rem = 12 > 1800px
+}
+
+@mixin h2 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 6.4rem;
+    // letter-spacing: 2px;
+    @include respond(tab-land) {
+        font-size:5.04rem;
+    }//1 rem = 9px < 1200px
+    @include respond(tab-port) {
+        font-size:5.6*0.8rem;
+        line-height: 6.4*0.8rem;
+    }//1 rem = 8px < 900px
+    @include respond(phone) {
+        font-size:5.6*0.6rem;
+        line-height: 6.4*.6rem;
+    } //1 rem = 8px < 600px
+    // @media(max-width: 400px) {
+    //     font-size:5.6*0.6rem;
+    //     line-height: 6.4*.6rem;
+    // } //1 rem = 8px < 400px
+    @include respond(big-desktop) {
+        font-size:5.6*1.2rem;
+        line-height: 6.4rem;
+    }//1 rem = 12 > 1800px
+}
+
+@mixin h3 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    @include respond(tab-port) {
+        font-size:4*0.9rem;
+    }//1 rem = 8px < 900px
+    @include respond(phone) {
+        font-size:4*0.8rem;
+    } //1 rem = 8px < 600px
+    @include respond(big-desktop) {
+        font-size:4*1.2rem;
+    }//1 rem = 12 > 1800px
+}
+
+@mixin h4 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+    @include respond(tab-land) {
+        font-weight: 500;
+    }//1 rem = 9px < 1200px
+    @include respond(phone) {
+        font-size:2.4*0.8rem;
+        line-height: 3.2*.8rem;
+    } //1 rem = 8px < 600px
+}
+
+@mixin btn {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+}
+
+@mixin text {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+@mixin text__bold {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+}
+
+@mixin text__nav {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+@mixin logo {
+    font-family: 'Comfortaa';
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 5.7rem;
+}
+
+@mixin feature-card-font {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 4.7rem;
+    @include respond(tab-land) {
+        font-weight: 500;
+    }//1 rem = 9px < 1200px
+
+    
+}
+
+//margin
+$gutter-horizontal:6.75rem;
+$gutter-15rem:1.5rem;
+
+
+
+//linear color
+@mixin background-color {
+    background-image: linear-gradient(to right bottom,$color-secondary-light, $color-secondary-dark);
+}
+@mixin color-linear-accent {
+    background-image: linear-gradient(to right bottom,$color-accent-light, $color-accent-dark);
+}
+@mixin color-linear-primary {
+    background-image: linear-gradient(to right bottom,$color-primary-light, $color-primary-dark);
+}
+
+//shadow
+@mixin box-shadow--dark {
+    box-shadow: 0px 3px 5px rgba(175,85,65, 0.15);
+}
+@mixin box-shadow--light{
+    box-shadow: 0px 8px 8px rgba(0,0,0, 0.07);
+}
+
+//text with linear color using clip
+@mixin text-linear-primary {
+    @include color-linear-primary;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+@mixin text-linear-accent {
+    @include color-linear-accent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+//MEIDA QUERY MANAGER  
+/*
+0-600: phone;
+600-900: tablet portrait;
+900-1200: tablet lanscape;
+[1200-1800]: normal style;
+1800+: big desktop;
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media(max-width: 600px){@content};
+    }
+    @if $breakpoint == tab-port {
+        @media(max-width: 900px){@content};
+    }
+    @if $breakpoint == tab-land {
+        @media(max-width: 1200px){@content};
+    }
+    @if $breakpoint == big-desktop {
+        @media(min-width: 1800px){@content};
+    }
+}
+

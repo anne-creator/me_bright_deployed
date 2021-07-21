@@ -1,0 +1,153 @@
+//card button
+.btn {
+    display: flex;
+    padding: 0.6rem 3.2rem;
+    border-radius: 12px;
+    color: $color-white;
+    border: none;
+    box-shadow: none;
+    @include btn;
+    &__primary {
+        @include color-linear-primary;
+    }
+    &__secondary {
+        @include text-linear-primary;
+        
+    }
+    &__accent--linear {
+        @include color-linear-accent;
+    }
+    
+}
+
+//feature card
+
+.feature-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    // height: 43.2rem;
+    border-radius: 12px;
+    @include text;
+    @include box-shadow--dark;
+    background-color: $color-white;
+    @include respond(phone) {
+        min-width: 20rem;
+    } //1 rem = 8px < 600px
+
+    &__name {
+        @include feature-card-font;
+        @include text-linear-primary;
+        text-align: center;
+        padding-top: 5rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__icon {
+        width: 26.9rem;
+        margin-bottom: 3.5rem;
+        @include respond(tab-port) {
+            width:26.9*0.8rem;
+            margin-bottom: 1.5rem;
+        }//1 rem = 8px < 900px
+        @include respond(phone) {
+
+        } //1 rem = 8px < 600px
+        @include respond(big-desktop) {
+            width:26.9*1.2rem;
+
+        }//1 rem = 12 > 1800px
+    } 
+}
+//price card
+.price-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    background-color: $color-grey;
+    background-color: $color-secondary-light;
+
+    height: 19.2rem;
+    border-radius: 16px;
+    margin-bottom: 4.4rem;
+    @include box-shadow--light;    
+
+    &__price {
+        margin-left: 3.2rem;
+        &__name{
+            @include h4;
+            @include text-linear-primary;
+
+        }
+        &__number {
+            @include h3;
+            @include text-linear-primary;
+        }
+    }
+
+    &__service-list {
+        &__item {
+            display: flex;
+            align-items: center;
+        }
+        & > &__item:not(:last-child){
+            margin-bottom: .8rem;
+        }
+        &__icon{
+            height: 1.6rem;
+            width: 1.6rem; 
+            margin-right: 0.7rem;
+        }
+        &__content {
+            @include text
+        }
+        .double-line {
+            margin-top: -2.4rem;
+        }
+    }
+    .col1{
+        flex:30;
+    }
+    .col2{
+        flex:27;
+    }
+
+
+    &__pay-btn {
+        @include btn;
+        @include color-linear-accent;
+        border:none;
+        border-radius: 12px;
+        padding: .6rem 3.2rem;
+        color:$color-white;
+        
+    }  
+
+    //3-col-grid layout
+    .price-container{
+        width: 27rem;
+        margin-right: 3rem;
+
+        display: flex;
+        align-items: center;
+        margin-left: 3.2rem;
+    }
+    .service-container {
+        flex:1;
+        
+        align-self: center;
+        display: flex;
+    }
+    .button-container {
+        width: 27rem;
+        margin-left: 3rem;
+        // background-color: red;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+////////////price card end//////////////

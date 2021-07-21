@@ -1,0 +1,57 @@
+@import '_mixins.scss';
+//font var 
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    // border: 1px solid red;
+ 
+}
+
+//color
+$color-primary-light: rgba(39,168,171,1);
+$color-primary-dark: rgba(12,110,132,1);
+
+$color-accent-light: rgba(255,115,69,1);
+$color-accent-dark: rgba(253,82,34,1);
+
+$color-secondary-light: #FFE7DC;
+$color-secondary-dark: #F5C6C0;
+
+$color-grey: rgba(242,242,242,1);
+$color-dark: #1D1616;
+$color-white: #fff;
+
+
+
+
+
+//base
+html { // > 1200px && < 1800px
+    font-size: 62.5%;
+    // background-color: yellow;
+    margin: 0 auto;
+    max-width: 144rem;
+    @include respond(tab-land) {font-size: 56.25%}//1 rem = 9px < 1200px
+    @include respond(tab-port) {font-size: 50%}//1 rem = 8px < 900px
+    @include respond(phone) {font-size: 50%;} //1 rem = 8px < 600px
+    @include respond(big-desktop) {font-size: 75%}//1 rem = 12 > 1800px
+}
+
+body {
+    // background-color: yellow;
+    font-family: 'Source Sans Pro','Open Sans',sans-serif;
+    box-sizing: border-box;  
+
+}
+
+//content width
+.w117 {
+    max-width: 117rem;
+    margin: 0 auto;
+}
+
+
+

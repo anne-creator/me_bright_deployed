@@ -1,0 +1,53 @@
+.footer {
+    height: 22.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        // background-color: red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        &__logo {
+            margin-left: 1.5rem;
+            display: flex;
+            &__icon {
+                margin-right: 1.5rem;
+                position:relative;
+                margin-top: -0.5rem;
+            }
+            &__name {
+                @include logo;
+            }
+        }
+        //nav bar
+        &__nav {
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+            margin-right: 1.5rem;
+            &__item {
+                display: flex;
+                @include text__nav;
+                padding:0 2rem;
+                // justify-content: center;
+
+                a {
+                    color: $color-dark;
+                }
+                
+            }
+        }
+    }
+    //end of content: first item in footer
+        
+    //second item in footer
+    &__copy-right {
+        @include text;
+        color: $color-dark;
+        opacity: 50%;
+    }
+}

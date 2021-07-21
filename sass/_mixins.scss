@@ -36,11 +36,7 @@
     @include respond(phone) {
         font-size:5.6*0.6rem;
         line-height: 6.4*.6rem;
-    } //1 rem = 8px < 600px
-    // @media(max-width: 400px) {
-    //     font-size:5.6*0.6rem;
-    //     line-height: 6.4*.6rem;
-    // } //1 rem = 8px < 400px
+    }
     @include respond(big-desktop) {
         font-size:5.6*1.2rem;
         line-height: 6.4rem;

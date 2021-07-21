@@ -1,28 +1,36 @@
 .CTA {
     @include background-color;
     height: 40rem;
-
+    @include respond(tab-port) {
+        height: 40*.8;
+    }//1 rem = 8px < 900px
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }//1 rem = 8px < 600xp
     &__container{
-        // background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
-        @include respond(tab-port) {
+        @include respond(phone) {
             flex-direction: column;
-        }//1 rem = 8px < 900px
+            height:95%;
+            width: 80%;
+        }//1 rem = 8px < 600px
         
         &__item {
-            height: 60%;
-            // background-color: $color-white;
+            height: 75%;
             border-radius: 12px;
-            padding-top: 1.6rem;
-            padding-bottom: 2.8rem;
+            // padding-top: 1.6rem;
+            // padding-bottom: 2.8rem;
             &:last-child { 
                 background-color: $color-primary-light;
+                @include respond(phone) {
+                    margin-top: 3rem;
+                }//1 rem = 8px < 600px
             }
-            
-            
         }
         .item--1 {
             display: flex;
@@ -35,11 +43,21 @@
             background-position:right bottom;
             background-repeat: no-repeat;
             background-color: #fff;
+            @include respond(phone) {
+                padding-top: 0rem;
+            } //1 rem = 8px < 600px
 
             .item__title {
                 @include h2;
                 @include text-linear-primary;
                 margin-bottom: 1.2rem;
+                @include respond(tab-port) {
+                    font-size:4.48rem;
+                }//1 rem = 8px < 900px
+                @include respond(phone) {
+                    font-size:5.6*0.6rem;
+                    line-height: 6.4*.6rem;
+                }
             }
             .item__email {
                 display: flex;
@@ -47,16 +65,25 @@
                 align-items: center;
                 margin-bottom: 1.2rem;
                 text-align: center;
+                @include respond(tab-port) {
+                    flex-direction: column;
+                }//1 rem = 8px < 900px
+                @include respond(phone) {
+                    flex-direction: row;
+                } //1 rem = 8px < 600px
                 &__email-address {
                     width: 31.8rem;
                     @include h4;
-                    // padding-left: 1.5rem;
                     color:$color-primary-dark;
-                    // margin-right: 1.6rem;
                 }
                 .item__button {
-                    // margin-left: -2rem;
                     padding: 0 0;
+                    @include respond(tab-port) {
+                        margin-top: 2.5rem;
+                    }//1 rem = 8px < 900px
+                    @include respond(phone) {
+                        margin-top: 0rem;
+                    } //1 rem = 8px < 600px
                     .email-link {
                         display: block;
                         color: $color-white; 
@@ -64,13 +91,8 @@
     
                     }
                 }
-            }
-        
-                
-            
-            
+            } 
         }
- 
         .item--2 {
             display: flex;
             justify-content: center; 
@@ -78,30 +100,35 @@
             margin-left: 1.5rem;
             background-image: url('../../resources/png/CTA-wechat.png');          
             background-size: 100%;
-            background-position: center bottom
-
-            ;
+            background-position: center bottom;
             background-repeat: no-repeat;
             .item__title{
                 text-align: center;
                 @include h2;
                 color: $color-white;
-                margin-left: 5rem;
+                @include respond(tab-port) {
+                    font-size:3.48rem;
+                }//1 rem = 8px < 900px
                 &__wechat{
                     width: 4.8rem;
                     height: 3.9rem;
                     margin-left: 1rem;
                     position: relative;
                     margin-top: 0.3rem;
+                    // @include respond(tab-port) {
+                    //     width: 4.8*.8rem;
+                    //     height: 3.9*.8rem;
+                    // }//1 rem = 8px < 900px
                 }
             }
             .item__wechat {
-                background-color: yellow;
-                width: 16.2rem;
-                height: 16.2rem;
+                width: 100%;
+                height: 100;
                 display: block;
                 margin: 0 auto;
-                margin-left: 5rem;
+                // @include respond(tab-port) {
+                //     margin-left: .5rem;
+                // }//1 rem = 8px < 900px
             }
         }
     }

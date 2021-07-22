@@ -146,11 +146,22 @@
             text-align: center;
         } //1 rem = 8px < 600px
     }
+    .title__cta {
+        display: flex;
+        align-items: center;
+      }
+      .btn__description {
+        color: $color-accent-dark;
+        font-style: italic;
+        margin-left: 2rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
 
 //3.brand logos
 .logo-container {
     display: flex;
-    margin-top: 4.8rem;
+    margin-top: 5.8rem;
     height: 7.6rem;
     // background-color: red;
     justify-content: space-evenly;

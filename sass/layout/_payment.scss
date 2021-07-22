@@ -1,0 +1,56 @@
+.payment {
+    height: 43.8rem;
+    width: 60%;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    z-index: 1000;
+    display: flex;
+    background-image: linear-gradient(75deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 60%, transparent 60%), url(../../resources/png/paymentBg.png);
+    background-size: contain;
+    // background-repeat: no-repeat;
+    border-radius: 16px;
+    box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, .6);
+    background-position: 100% 0;
+    display: none;
+   &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 50%;
+        height: 100%;
+        margin-left: 9rem;
+        &__title {
+            font-weight: bold;
+            @include h2;
+            text-align: center;
+            color: $color-primary-dark;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        &__content {
+            @include h4;
+            color: $color-primary-dark;
+            text-align: left;
+        }
+   }
+   &__close {
+    position: absolute;
+    width: 5.6rem;
+    height: 5.6rem;
+    right: 3.5rem;
+    top: 3.5rem;
+    border-radius: 50%;
+    background-color:rgba(12,110,132,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__img {
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+  }
+  }

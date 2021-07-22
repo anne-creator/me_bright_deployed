@@ -545,9 +545,20 @@ body {
     .title__secondary {
       text-align: center; } }
 
+.title__cta {
+  display: flex;
+  align-items: center; }
+
+.btn__description {
+  color: #fd5222;
+  font-style: italic;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  font-weight: bold; }
+
 .logo-container {
   display: flex;
-  margin-top: 4.8rem;
+  margin-top: 5.8rem;
   height: 7.6rem;
   justify-content: space-evenly;
   align-items: center; }
@@ -661,7 +672,7 @@ body {
     background-clip: text;
     color: transparent;
     text-align: center;
-    margin-bottom: 10.3rem; }
+    margin-bottom: 12.3rem; }
     @media (max-width: 1200px) {
       .service__title {
         font-size: 5.04rem; } }
@@ -795,6 +806,82 @@ body {
         line-height: 6.4rem; } }
   .price__cta-button {
     margin-top: -1rem; }
+
+.payment {
+  height: 43.8rem;
+  width: 60%;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  z-index: 1000;
+  display: flex;
+  background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 60%, transparent 60%), url(../../resources/png/paymentBg.png);
+  background-size: contain;
+  border-radius: 16px;
+  box-shadow: 0 1.5rem 4rem rgba(12, 110, 132, 0.6);
+  background-position: 100% 0;
+  display: none; }
+  .payment__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    height: 100%;
+    margin-left: 9rem; }
+    .payment__info__title {
+      font-weight: bold;
+      font-size: 5.6rem;
+      font-weight: 700;
+      line-height: 6.4rem;
+      text-align: center;
+      color: #0c6e84;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem; }
+      @media (max-width: 1200px) {
+        .payment__info__title {
+          font-size: 5.04rem; } }
+      @media (max-width: 900px) {
+        .payment__info__title {
+          font-size: 4.48rem;
+          line-height: 5.12rem; } }
+      @media (max-width: 600px) {
+        .payment__info__title {
+          font-size: 3.36rem;
+          line-height: 3.84rem; } }
+      @media (min-width: 1800px) {
+        .payment__info__title {
+          font-size: 6.72rem;
+          line-height: 6.4rem; } }
+    .payment__info__content {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 3.2rem;
+      color: #0c6e84;
+      text-align: left; }
+      @media (max-width: 1200px) {
+        .payment__info__content {
+          font-weight: 500; } }
+      @media (max-width: 600px) {
+        .payment__info__content {
+          font-size: 1.92rem;
+          line-height: 2.56rem; } }
+  .payment__close {
+    position: absolute;
+    width: 5.6rem;
+    height: 5.6rem;
+    right: 3.5rem;
+    top: 3.5rem;
+    border-radius: 50%;
+    background-color: rgba(12, 110, 132, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .payment__close__img {
+      width: 1.7rem;
+      height: 1.7rem; }
 
 .col-1-of-4 {
   margin: 1.5rem;

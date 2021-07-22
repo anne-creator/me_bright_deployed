@@ -37,7 +37,7 @@
     
 
     <!-- |||||||||||heor page|||||||||||||||||| -->
-    <div class="hero">
+    <div id='home' class="hero">
       <header class="header">
         <div class="header__logo">
           <!-- logo -->
@@ -54,10 +54,10 @@
         <!-- right side -->
         <nav>
           <ul class="header__nav">
-            <li class="header__nav__item"><a href="">Home</a></li>
-            <li class="header__nav__item"><a href="">Mentorship</a></li>
-            <li class="header__nav__item"><a href="">Certificate</a></li>
-            <li class="header__nav__item"><a href="">Contact</a></li>
+            <li class="header__nav__item"><a href="#home">Home</a></li>
+            <li class="header__nav__item"><a href="#feature">How it works</a></li>
+            <li class="header__nav__item"><a href="#price">Price</a></li>
+            <li class="header__nav__item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -70,7 +70,16 @@
           <h4 class="title__secondary">
             Join our Fantastic <span>Job-Gurantee</span> Career Metorship
           </h4>
-          <button class="btn btn__accent--linear">FREE 15-min consultant !</button>
+          <div class="title__cta">
+            <a
+            class="btn btn__accent--linear"
+            href="mailto:changliuresume@gmail.com"
+            >Email Us</a
+            >
+            <span class="btn__description">
+            Get a FREE 15-min consultant !</span
+            >
+          </div>
         </div>
         <!-- right -->
         <div class="main__pic-frame">
@@ -175,6 +184,26 @@
       </section>
     </div>
     
+    <!-- |||||||||||payment popup window|||||||||||| -->
+    <div class="payment">
+      <div class="payment__info">
+        <div class="payment__info__title">Payment</div>
+        <div class="payment__info__content">
+          We receive EMT: <br />
+          name:CHANG LIU<br />
+          email:changliuresume@gmail.com<br />
+          Please set deposit answer as : resume
+        </div>
+        
+      </div>
+      <div class="payment__close">
+        <img
+          class="payment__close__img"
+          src="../../resources/svg/close.svg"
+          alt=""
+        />
+      </div>
+    </div>
     
 <!-- ///////// -->
     
@@ -216,7 +245,7 @@
       </div>
     </section>
     <!-- |||||||||||feature page|||||||||||| -->
-    <section class="feature">
+    <section id="feature" class="feature">
       <h2 class="feature__title">How it works</h2>
         <!-- card container -->
         <div class="feature__card-container">
@@ -261,16 +290,14 @@
           </div>
 
         </div>
-    </section>
-
+    </section>      
     <!-- |||||||||||price page|||||||||||| -->
-    <section class="price">
+    <section id="price" class="price">
       <h2 class="w117 price__title">Price</h2>
       <div class="w117 price__card-container">
         
-        <!-- 111111111111 card1 11111111111 -->
-        <div class="price-card">
-
+      <!-- 111111111111 card1 11111111111 -->
+      <div class="price-card">
           <div class="price-container">
             <div class="price-card__price">
               <h4 class="price-card__price__name">Basic</h4>
@@ -308,266 +335,268 @@
           </div>
           
           <div class="button-container">
-            <button class="price-card__pay-btn ">Pay NOW</button>
+            <button
+              class="price-card__pay-btn"
+            >
+              Pay NOW
+            </button>
+        </div>
+      </div>
+      <!-- 111111111111 card2 11111111111 -->
+      <div class="price-card">
+
+        <div class="price-container">
+          <div class="price-card__price">
+            <h4 class="price-card__price__name">All-around</h4>
+            <h3 class="price-card__price__number">$1250</h3>
           </div>
         </div>
-        <!-- 111111111111 card2 11111111111 -->
-        <div class="price-card">
-  
-          <div class="price-container">
-            <div class="price-card__price">
-              <h4 class="price-card__price__name">All-around</h4>
-              <h3 class="price-card__price__number">$1250</h3>
+
+        <div class="service-container">
+          <div class="price-card__service-list col1">
+            
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">All Services included in Basic plan</p>
             </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">Linkedin SEO</p>
+            </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon double-line" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content ">Job Application and Interview 1 on<br>1 lession + interview questions</p>
+            </div>
+            
           </div>
 
-          <div class="service-container">
-            <div class="price-card__service-list col1">
-              
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">All Services included in Basic plan</p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">Linkedin SEO</p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon double-line" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content ">Job Application and Interview 1 on<br>1 lession + interview questions</p>
-              </div>
-              
+          <div class="price-card__service-list col2">
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon double-line" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">Unlimited  question asking (via WeChat)</p>
             </div>
-
-            <div class="price-card__service-list col2">
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon double-line" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">Unlimited  question asking (via WeChat)</p>
-              </div>
-              
-            </div>
-          </div>
-          
-          <div class="button-container">
-            <button class="price-card__pay-btn ">Pay NOW</button>
+            
           </div>
         </div>
-        <!-- 111111111111 card3 11111111111 -->
-        <div class="price-card">
-  
-          <div class="price-container">
-            <div class="price-card__price">
-              <h4 class="price-card__price__name">Upgraded</h4>
-              <h3 class="price-card__price__number">$2050</h3>
-            </div>
-          </div>
+        
+        <div class="button-container">
+          <button class="price-card__pay-btn ">Pay NOW</button>
+        </div>
+      </div>
+      <!-- 111111111111 card3 11111111111 -->
+      <div class="price-card">
 
-          <div class="service-container">
-            <div class="price-card__service-list col1">
-              
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon double-line" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">All Services included in All-around Plan  </p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">Career planning, Career coaching </p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content ">Unlimited Job references</p>
-              </div>
-              
-            </div>
-
-            <div class="price-card__service-list col2">
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon double-line" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">3-time 1 on 1 lessons with mentor</p>
-              </div>
-              
-            </div>
-          </div>
-          
-          <div class="button-container">
-            <button class="price-card__pay-btn ">Pay NOW</button>
+        <div class="price-container">
+          <div class="price-card__price">
+            <h4 class="price-card__price__name">Upgraded</h4>
+            <h3 class="price-card__price__number">$2050</h3>
           </div>
         </div>
-        <!-- 111111111111 card4 11111111111 -->
-        <div class="price-card">
-  
-          <div class="price-container">
-            <div class="price-card__price">
-              <h4 class="price-card__price__name">Job-Guranteed</h4>
-              <h3 class="price-card__price__number">$7000</h3>
+
+        <div class="service-container">
+          <div class="price-card__service-list col1">
+            
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon double-line" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">All Services included in All-around Plan  </p>
             </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">Career planning, Career coaching </p>
+            </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content ">Unlimited Job references</p>
+            </div>
+            
           </div>
 
-          <div class="service-container">
-            <div class="price-card__service-list col1">
-              
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">All Services included in Upgraded plan</p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">Unlimited chat with mentor</p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content ">Pay  second part  after receving the offer</p>
-              </div>
+          <div class="price-card__service-list col2">
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon double-line " src="resources/png/Check-mark.png" alt="check mark">              <p class="price-card__service-list__content">3-time 1 on 1 lessons with mentor</p>
             </div>
-            <!-- <div class="price-card__service-list col2">
-              
-            </div> -->
-          </div>
-          
-          <div class="button-container">
-            <button class="price-card__pay-btn ">Pay NOW</button>
+            
           </div>
         </div>
-        <!-- 111111111111 card5 11111111111 -->
-        <div class="price-card">
-  
-          <div class="price-container">
-            <div class="price-card__price">
-              <h4 class="price-card__price__name">Chinese Resume</h4>
-              <h3 class="price-card__price__number">$550</h3>
-            </div>
-          </div>
+        
+        <div class="button-container">
+          <button class="price-card__pay-btn ">Pay NOW</button>
+        </div>
+      </div>
+      <!-- 111111111111 card4 11111111111 -->
+      <div class="price-card">
 
-          <div class="service-container">
-            <div class="price-card__service-list col1">
-              
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">Personally Designed Resume</p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">Personally Desinger Cover Letter</p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon double-line" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content ">Job Application and Interview 1 on<br>1 lession + interview questions</p>
-              </div>
-              
-            </div>
-
-            <!-- <div class="price-card__service-list col2">
-            </div> -->
-          </div>
-          
-          <div class="button-container">
-            <button class="price-card__pay-btn ">Pay NOW</button>
+        <div class="price-container">
+          <div class="price-card__price">
+            <h4 class="price-card__price__name">Job-Guranteed</h4>
+            <h3 class="price-card__price__number">$7000</h3>
           </div>
         </div>
-        <!-- 111111111111 card6 11111111111 -->
-        <div class="price-card">
-  
-          <div class="price-container">
-            <div class="price-card__price">
-              <h4 class="price-card__price__name">Online-Acessment training</h4>
-              <h3 class="price-card__price__number">$750</h3>
+
+        <div class="service-container">
+          <div class="price-card__service-list col1">
+            
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">All Services included in Upgraded plan</p>
+            </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">Unlimited chat with mentor</p>
+            </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content ">Pay  second part  after receving the offer</p>
             </div>
           </div>
+          <!-- <div class="price-card__service-list col2">
+            
+          </div> -->
+        </div>
+        
+        <div class="button-container">
+          <button class="price-card__pay-btn ">Pay NOW</button>
+        </div>
+      </div>
+      <!-- 111111111111 card5 11111111111 -->
+      <div class="price-card">
 
-          <div class="service-container">
-            <div class="price-card__service-list col1">
-              
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">Personality Questionnaire Answer</p>
-              </div>
+        <div class="price-container">
+          <div class="price-card__price">
+            <h4 class="price-card__price__name">Chinese Resume</h4>
+            <h3 class="price-card__price__number">$550</h3>
+          </div>
+        </div>
 
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">Personality  Answer</p>
-              </div>
-
+        <div class="service-container">
+          <div class="price-card__service-list col1">
+            
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">Personally Designed Resume</p>
             </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">Personally Desinger Cover Letter</p>
+            </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon double-line" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content ">Job Application and Interview 1 on<br>1 lession + interview questions</p>
+            </div>
+            
+          </div>
+
+          <!-- <div class="price-card__service-list col2">
+          </div> -->
+        </div>
+        
+        <div class="button-container">
+          <button class="price-card__pay-btn ">Pay NOW</button>
+        </div>
+      </div>
+      <!-- 111111111111 card6 11111111111 -->
+      <div class="price-card">
+
+        <div class="price-container">
+          <div class="price-card__price">
+            <h4 class="price-card__price__name">Online-Acessment training</h4>
+            <h3 class="price-card__price__number">$750</h3>
+          </div>
+        </div>
+
+        <div class="service-container">
+          <div class="price-card__service-list col1">
+            
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">Personality Questionnaire Answer</p>
+            </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">Personality  Answer</p>
+            </div>
+
+          </div>
 <!-- 
-            <div class="price-card__service-list col2">
-            </div> -->
-          </div>
-          
-          <div class="button-container">
-            <button class="price-card__pay-btn ">Pay NOW</button>
+          <div class="price-card__service-list col2">
+          </div> -->
+        </div>
+        
+        <div class="button-container">
+          <button class="price-card__pay-btn ">Pay NOW</button>
+        </div>
+      </div>
+      <!-- 111111111111 card7 11111111111 -->
+      <div class="price-card">
+
+        <div class="price-container">
+          <div class="price-card__price">
+            <h4 class="price-card__price__name">Certifiates/skills Training</h4>
           </div>
         </div>
-        <!-- 111111111111 card7 11111111111 -->
-        <div class="price-card">
-  
-          <div class="price-container">
-            <div class="price-card__price">
-              <h4 class="price-card__price__name">Certifiates/skills Training</h4>
-            </div>
-          </div>
 
-          <div class="service-container">
-            <div class="price-card__service-list col1">
-              
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">CFA</p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content">CSC</p>
-              </div>
-
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content ">Cooperate Banking
-              </div>
-              
+        <div class="service-container">
+          <div class="price-card__service-list col1">
+            
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">CFA</p>
             </div>
 
-            <div class="price-card__service-list col2">
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content ">Data Science courses
-              </div>
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content ">Marketing campaign
-              </div>
-              <div class="price-card__service-list__item">
-                <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
-                <p class="price-card__service-list__content ">SMM
-              </div>
-
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content">CSC</p>
             </div>
+
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon" src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content ">Cooperate Banking
+            </div>
+            
           </div>
-          
-          <div class="button-container">
-            <button class="price-card__pay-btn">Please Contact</button>
+
+          <div class="price-card__service-list col2">
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content ">Data Science courses
+            </div>
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content ">Marketing campaign
+            </div>
+            <div class="price-card__service-list__item">
+              <img class="price-card__service-list__icon " src="resources/png/Check-mark.png" alt="check mark">
+              <p class="price-card__service-list__content ">SMM
+            </div>
+
           </div>
+        </div>
+        
+        <div class="button-container">
+          <button class="price-card__pay-btn">Please Contact</button>
         </div>
       </div> 
       <!-- end of price-container -->
 
       <div class="feature__cta-button">
         <h4 class="feature__cta-button__text">Can't Decide?</h4>
-        <button class="btn btn__primary">Talk to us</button>
+        <button class="btn btn__primary" <a class="btn btn__accent--linear" href="mailto:changliuresume@gmail.com">EMIAL US</a>>Talk to us</button>
       </div>
 
       
     </section>
 
     <!-- |||||||||||CTA page|||||||||||| -->
-    <section class="CTA">
+    <section id="contact" class="CTA">
       <div class="w117 row CTA__container">
         <div class="CTA__container__item item--1">
           <!-- 1 -->
@@ -608,10 +637,10 @@
         </div>
         <nav>
           <ul class="footer__content__nav">
-            <li class="footer__content__nav__item"><a href="">Home</a></li>
-            <li class="footer__content__nav__item"><a href="">Mentorship</a></li>
-            <li class="footer__content__nav__item"><a href="">Certificate</a></li>
-            <li class="footer__content__nav__item"><a href="">Contact</a></li>
+            <li class="footer__content__nav__item"><a href="#home">Home</a></li>
+            <li class="footer__content__nav__item"><a href="#feature">Mentorship</a></li>
+            <li class="footer__content__nav__item"><a href="#price">Certificate</a></li>
+            <li class="footer__content__nav__item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -639,9 +668,7 @@
       el: '.swiper-scrollbar',
     },
   })        
-  </script>
-    <script src="index.js"></script>
-  </body>
-  <!-- iconfont reference -->
-  <!-- <script src="//at.alicdn.com/t/font_2463533_7qruava10en.js"></script> -->
+</script>
+  <script src="js/index.js"></script>
+</body>
 </html>

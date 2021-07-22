@@ -1,3 +1,4 @@
+
 .price {
     padding-top: 7.3rem;
     padding-bottom: 18.7rem;
@@ -7,7 +8,6 @@
         padding-top: 3rem;
         padding-bottom: 5rem;
     } //1 rem = 8px < 600px
-    
     &__title {
         @include text-linear-primary;
         @include h2;

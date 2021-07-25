@@ -46,7 +46,32 @@
                 a {
                     color: $color-dark;
                 }
+                a:hover,
+                a:active {
+                    letter-spacing: 5px;
+                    color: $color-accent-dark;
+                }
                 
+                a:after,
+                a:before {
+                    backface-visibility: hidden;
+                    border: 1px solid rgba($color-accent-dark, 0);
+                    bottom: 0px;
+                    content: " ";
+                    display: block;
+                    margin: 0 auto;
+                    position: relative;
+                    transition: all 280ms ease-in-out;
+                    width: 0;
+                }
+                
+                a:hover:after,
+                a:hover:before {
+                    backface-visibility: hidden;
+                    border-color: $color-accent-dark;
+                    transition: width 350ms ease-in-out;
+                    width: 100%;
+                }
             }
         }
     }

@@ -10,7 +10,6 @@
     display: flex;
     background-image: linear-gradient(75deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 60%, transparent 60%), url(../../resources/png/paymentBg.png);
     background-size: contain;
-    // background-repeat: no-repeat;
     border-radius: 16px;
     box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, .6);
     background-position: 100% 0;
@@ -48,6 +47,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover {
+      background-color: $color-accent-light;
+    }
     &__img {
       width: 1.7rem;
       height: 1.7rem;

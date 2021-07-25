@@ -46,24 +46,20 @@ body {
   font-size: 1.8rem;
   line-height: 3.6rem; }
   .btn__primary {
-    background-image: linear-gradient(to right bottom, #27a8ab, #0c6e84); }
-  .btn__secondary {
-    background-image: linear-gradient(to right bottom, #27a8ab, #0c6e84);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; }
+    color: #0c6e84;
+    border: 0.3rem solid #0c6e84; }
   .btn__accent {
     color: #ff7345;
     border: 0.3rem solid #ff7345; }
 
-.hovered {
+.hovered-accent {
   overflow: hidden;
   position: relative;
   text-decoration: none;
   transition: .2s transform ease-in-out;
   will-change: transform;
   z-index: 0; }
-  .hovered::after {
+  .hovered-accent::after {
     background-color: #ff7345;
     content: '';
     display: block;
@@ -77,12 +73,45 @@ body {
     transition: .2s transform ease-out;
     will-change: transform;
     z-index: -1; }
-  .hovered:hover::after {
+  .hovered-accent:hover::after {
     transform: translate(0, 0); }
-  .hovered:hover {
+  .hovered-accent:hover {
     color: #fff;
     transform: scale(1.15);
     will-change: transform; }
+  .hovered-accent:active {
+    transform: scale(1); }
+
+.hovered-primary {
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: .2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0; }
+  .hovered-primary::after {
+    background-image: linear-gradient(to right bottom, #27a8ab, #0c6e84);
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1; }
+  .hovered-primary:hover::after {
+    transform: translate(0, 0); }
+  .hovered-primary:hover {
+    color: #fff;
+    transform: scale(1.15);
+    will-change: transform;
+    border: hidden; }
+  .hovered-primary:active {
+    transform: scale(1); }
 
 .feature-card {
   background-repeat: no-repeat;
@@ -204,6 +233,14 @@ body {
     border-radius: 12px;
     padding: .6rem 3.2rem;
     color: #fff; }
+    .price-card__pay-btn:hover {
+      transform: translate(0rem, -1rem);
+      transform: scale(1.1);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+    .price-card__pay-btn:active {
+      transform: translate(0, 0);
+      transform: scale(1);
+      box-shadow: none; }
   .price-card .price-container {
     width: 27rem;
     display: flex;
@@ -497,6 +534,27 @@ body {
             padding: 1rem; } }
         .hero .header__nav__item a {
           color: #1D1616; }
+        .hero .header__nav__item a:hover,
+        .hero .header__nav__item a:active {
+          letter-spacing: 5px;
+          color: #fd5222; }
+        .hero .header__nav__item a:after,
+        .hero .header__nav__item a:before {
+          backface-visibility: hidden;
+          border: 1px solid rgba(253, 82, 34, 0);
+          bottom: 0px;
+          content: " ";
+          display: block;
+          margin: 0 auto;
+          position: relative;
+          transition: all 280ms ease-in-out;
+          width: 0; }
+        .hero .header__nav__item a:hover:after,
+        .hero .header__nav__item a:hover:before {
+          backface-visibility: hidden;
+          border-color: #fd5222;
+          transition: width 350ms ease-in-out;
+          width: 100%; }
 
 .main {
   display: flex;
@@ -942,6 +1000,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .payment__close:hover {
+      background-color: #ff7345; }
     .payment__close__img {
       width: 1.7rem;
       height: 1.7rem; }
@@ -1173,6 +1233,27 @@ body {
             padding: 0 1rem; } }
         .footer__content__nav__item a {
           color: #1D1616; }
+        .footer__content__nav__item a:hover,
+        .footer__content__nav__item a:active {
+          letter-spacing: 5px;
+          color: #fd5222; }
+        .footer__content__nav__item a:after,
+        .footer__content__nav__item a:before {
+          backface-visibility: hidden;
+          border: 1px solid rgba(253, 82, 34, 0);
+          bottom: 0px;
+          content: " ";
+          display: block;
+          margin: 0 auto;
+          position: relative;
+          transition: all 280ms ease-in-out;
+          width: 0; }
+        .footer__content__nav__item a:hover:after,
+        .footer__content__nav__item a:hover:before {
+          backface-visibility: hidden;
+          border-color: #fd5222;
+          transition: width 350ms ease-in-out;
+          width: 100%; }
   .footer__copy-right {
     font-family: Roboto;
     font-weight: 400;

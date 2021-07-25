@@ -3,28 +3,24 @@
     display: flex;
     padding: 0.6rem 3.2rem;
     border-radius: 12px;
-    color: $color-white;
-    @include btn;
+    color:$color-white;                                          @include btn;
     &__primary {
-        @include color-linear-primary;
-    }
-    &__secondary {
-        @include text-linear-primary;
+        color: $color-primary-dark;
+        border: 0.3rem solid $color-primary-dark;
+        // background-color: transparent;
     }
     &__accent {
         color: $color-accent-light;
         border: 0.3rem solid $color-accent-light;
-       
     }
 }
-.hovered {
+.hovered-accent {
   overflow: hidden;
   position: relative;
   text-decoration: none;
   transition: .2s transform ease-in-out;
   will-change: transform;
   z-index: 0;
-  
   &::after{
     background-color: $color-accent-light;
     content: '';
@@ -49,10 +45,48 @@
     transform: scale(1.15);
     will-change: transform;
     }
+    &:active {
+        transform: scale(1);
+    }
 }
-
+.hovered-primary {
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    &::after{
+    //   background-color: $color-primary-dark;
+      @include color-linear-primary;
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-100%, 0) rotate(10deg);
+      transform-origin: top left;
+      transition: .2s transform ease-out;
+      will-change: transform;
+      z-index: -1;
+    }
+    &:hover::after{
+      transform: translate(0, 0);
+    }
+    &:hover{
+      // border: 2px solid transparent;
+      color: $color-white;
+      transform: scale(1.15);
+      will-change: transform;
+      border:hidden;
+      }
+      &:active {
+          transform: scale(1);
+      }
+  }
 //feature card
-
 .feature-card {
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,6 +191,16 @@
         border-radius: 12px;
         padding: .6rem 3.2rem;
         color:$color-white;
+        &:hover {
+            transform:translate(0rem,-1rem);
+            transform: scale(1.10);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        &:active {
+            transform:translate(0,0);
+            transform: scale(1);
+            box-shadow: none;
+        }
     }  
 
     //3-col-grid layout

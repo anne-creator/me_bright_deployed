@@ -84,11 +84,13 @@
                     @include respond(phone) {
                         margin-top: 0rem;
                     } //1 rem = 8px < 600px
-                    .email-link {
+                    // .email-link {
                         display: block;
-                        color: $color-white; 
                         padding: 0.6rem 3.2rem;
-    
+                        color: $color-accent-light; 
+                    // }
+                    &:hover {
+                        color:$color-white;
                     }
                 }
             } 

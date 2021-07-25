@@ -41,8 +41,6 @@ body {
   padding: 0.6rem 3.2rem;
   border-radius: 12px;
   color: #fff;
-  border: none;
-  box-shadow: none;
   font-family: Roboto;
   font-weight: 700;
   font-size: 1.8rem;
@@ -54,8 +52,37 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent; }
-  .btn__accent--linear {
-    background-image: linear-gradient(to right bottom, #ff7345, #fd5222); }
+  .btn__accent {
+    color: #ff7345;
+    border: 0.3rem solid #ff7345; }
+
+.hovered {
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: .2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0; }
+  .hovered::after {
+    background-color: #ff7345;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1; }
+  .hovered:hover::after {
+    transform: translate(0, 0); }
+  .hovered:hover {
+    color: #fff;
+    transform: scale(1.15);
+    will-change: transform; }
 
 .feature-card {
   background-repeat: no-repeat;
@@ -226,6 +253,34 @@ body {
 [1200-1800]: normal style;
 1800+: big desktop;
 */
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 100%; } }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 100%;
+    transform: translateX(0); } }
+
+@keyframes moveInButton {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0; }
+  100% {
+    opacity: 100%;
+    transform: translateX(0); } }
+
 .experience {
   background-color: #fff;
   color: #1D1616;
@@ -504,7 +559,11 @@ body {
   font-weight: 700;
   line-height: 7.2rem;
   color: #1D1616;
-  margin-bottom: 1.2rem; }
+  margin-bottom: 1.2rem;
+  -webkit-animation-name: moveInLeft;
+  animation-name: moveInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
   @media (max-width: 900px) {
     .title__primary {
       font-size: 5.4rem;
@@ -528,7 +587,11 @@ body {
   font-weight: 700;
   line-height: 3.2rem;
   color: #0c6e84;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  -webkit-animation-name: moveInLeft;
+  animation-name: moveInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
   @media (max-width: 1200px) {
     .title__secondary {
       font-weight: 500; } }
@@ -999,17 +1062,18 @@ body {
             .CTA__container .item--1 .item__email__email-address {
               margin-bottom: 1.5rem; } }
         .CTA__container .item--1 .item__email .item__button {
-          padding: 0 0; }
+          padding: 0 0;
+          display: block;
+          padding: 0.6rem 3.2rem;
+          color: #ff7345; }
           @media (max-width: 900px) {
             .CTA__container .item--1 .item__email .item__button {
               margin-top: 2.5rem; } }
           @media (max-width: 600px) {
             .CTA__container .item--1 .item__email .item__button {
               margin-top: 0rem; } }
-          .CTA__container .item--1 .item__email .item__button .email-link {
-            display: block;
-            color: #fff;
-            padding: 0.6rem 3.2rem; }
+          .CTA__container .item--1 .item__email .item__button:hover {
+            color: #fff; }
     .CTA__container .item--2 {
       display: flex;
       justify-content: center;
